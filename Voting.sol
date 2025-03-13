@@ -58,7 +58,7 @@ contract Voting {
 
     function getVoteResult(uint256 _voteId) external view returns (uint256 yesVotes, uint256 noVotes, bool isActive) {
         require(_voteId < votes.length, "Invalid vote ID");
-        Vote memory currentVote = votes[_voteId]; // Renamed variable to avoid conflict
+        Vote memory currentVote = votes[_voteId];
         return (currentVote.yesVotes, currentVote.noVotes, currentVote.isActive);
     }
 }
